@@ -101,10 +101,19 @@ function updateCounter() {
     document.getElementById("game-counter").innerHTML = counter >= 1 ? counter-- : "Let's go";
 }
 
+let confettiInterval;
+function startConfetti() {
+    confettiInterval = setInterval(() => createConfetti(), 100);
+}
+function stopConfetti() {
+    clearInterval(confettiInterval);
+}
+
 function startGame() {
     stopConfetti();
     GameSession.started = true;
     GameSession.round = 1;
+    GameSession.score = 0;
     document.getElementById("back").style.display = "none";
     startRound();
 }
@@ -112,6 +121,7 @@ function startGame() {
 async function startRound() {
 
     if (GameSession.round === 16) {
+        GameSession.timerStopped = true;
         document.getElementById("choices").classList.remove("visible");
         document.getElementById("score").classList.remove("visible");
         document.getElementById("rounds").classList.remove("visible");
@@ -171,6 +181,7 @@ async function startRound() {
                 document.getElementById("lyric").innerText = "";
                 GameSession.starting = false;
                 GameSession.started = false;
+                clearInterval(confettiInterval);
                 startGame();
             }
 
@@ -312,23 +323,12 @@ function createConfetti() {
     confetti.style.left = `${Math.random() * window.innerWidth}px`;
     confetti.style.transform = `rotate(${Math.random() * 720 | 0}deg)`
     confetti.style.backgroundColor = getRandomColor();
-    const horizontalMovement = (Math.random() - 0.5) * 4;
-    confetti.style.animation = `fall 3s ease-in infinite, moveHorizontal ${Math.random() * 2 + 1 | 0}s linear infinite`;
-    confetti.style.transform += ` translateX(${horizontalMovement}vw)`;
 
     document.body.appendChild(confetti);
 
     confetti.addEventListener("animationend", () => {
         confetti.remove();
     });
-}
-let confettiInterval = null;
-function startConfetti() {
-    confettiInterval = setInterval(createConfetti, 300);
-}
-function stopConfetti() {
-    clearInterval(confettiInterval);
-    confettiInterval = null;
 }
 
 function compareArtists(artist1, artist2) {
