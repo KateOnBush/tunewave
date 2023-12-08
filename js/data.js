@@ -1654,6 +1654,7 @@ const GLOBAL_LYRICS = [
   { "lyric": "Wake me up when September ends.", "artist": "Green Day", "theme": "rock", "title": "Wake Me Up When September Ends" },
   { "lyric": "You're still the one I run to, the one that I belong to.", "artist": "Shania Twain", "theme": "country", "title": "You're Still the One" },
   { "lyric": "Say my name, say my name.", "artist": "Destiny's Child", "theme": "pop", "title": "Say My Name" },
+  { "lyric": "Say my name, say my name, if you love me let me hear you.", "artist": "Bebe Rexha, David Guetta", "theme": "pop", "title": "Say My Name" },
   { "lyric": "And I got the recipe, it's called Black Magic.", "artist": "Little Mix", "theme": "pop", "title": "Black Magic" },
   { "lyric": "I will go down with this ship.", "artist": "Dido", "theme": "pop", "title": "White Flag" },
   { "lyric": "I'm radioactive, radioactive.", "artist": "Imagine Dragons", "theme": "rock", "title": "Radioactive" }
