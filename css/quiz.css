@@ -383,6 +383,30 @@ main .game {
     }
 }
 
+@keyframes streak {
+    0% {
+        transform: translate(-300px, 100px) scale(250%);
+        opacity: 1;
+    }
+    10% {
+        transform: translate(-300px, 100px) scale(400%);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translate(-300px, 100px) scale(200%);
+        opacity: 0;
+    }
+}
+
+.score.streak {
+    color: blueviolet;
+    opacity: 0;
+}
+.score.streak.active {
+    animation: streak 2.5s ease;
+    opacity: 0;
+}
+
 .score.add.active {
     animation: adding 2.5s ease;
     opacity: 0;
