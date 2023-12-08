@@ -193,6 +193,7 @@ async function startRound() {
 
     const loader = document.getElementById("loader");
     loader.classList.add("visible");
+    document.getElementById("score").innerText = `${GameSession.score} PTS`;
     try {
 
         await wait(300 + Math.random() * 1200 | 0);
@@ -283,6 +284,7 @@ async function startTimer() {
 async function addScore(add) {
 
     GameSession.score += add;
+    GameSession.score = Math.max(GameSession.score, 0);
     const score = document.getElementById("score");
     const scoreAdder = document.getElementById("score-adder");
     scoreAdder.innerText = add + " PTS";
