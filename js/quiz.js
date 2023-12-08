@@ -14,12 +14,12 @@ const welcomeTexts = [
 "We hope these rules help you have fun while testing your musical knowledge. Shall we start?"]
 
 //sounds
-const countdown = new Audio("../sound/countdown.wav");
-const crowd = new Audio("../sound/crowd.mp3");
-const wrongAnswer = new Audio("../sound/wrong_answer.mp3");
-const timer = new Audio("../sound/timer.mp3");
+const countdown = new Audio("sound/countdown.wav");
+const crowd = new Audio("sound/crowd.mp3");
+const wrongAnswer = new Audio("sound/wrong_answer.mp3");
+const timer = new Audio("sound/timer.mp3");
 
-const rightAnswers = [0, 1, 2, 3, 4].map(e => new Audio(`../sound/right_answer_${e}.mp3`));
+const rightAnswers = [0, 1, 2, 3, 4].map(e => new Audio(`sound/right_answer_${e}.mp3`));
 
 [...rightAnswers, countdown, wrongAnswer, timer].forEach(sound => sound.volume = 0.2);
 crowd.volume = 0.1;
