@@ -236,7 +236,7 @@ async function startRound() {
                     _e.onclick = () => {};
                 });
                 let addedScore = right ?
-                    ((GameSession.timer) * 5 + GameSession.streak * (GameSession.timer) * Math.floor(1 + Math.random() * 2) + (GameSession.streak === 4 ? Math.floor(5 + Math.random() * 10) : 0)) :
+                    ((GameSession.timer) * 5 + GameSession.streak * (GameSession.timer) * Math.floor(2 + Math.random() * 3) + (GameSession.streak === 4 ? Math.floor(5 + Math.random() * 10) : 0)) :
                     (GameSession.timer - 11) * Math.floor(4 + Math.random() * 8);
                 if (!right) GameSession.streak = 0;
                 timer.pause();
