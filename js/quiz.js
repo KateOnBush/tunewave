@@ -217,7 +217,7 @@ async function startRound() {
     document.getElementById("score").innerText = `${GameSession.score} PTS`;
     try {
 
-        await wait(300 + Math.random() * 1200 | 0);
+        await wait(100 + Math.random() * 200 | 0);
 
         loader.classList.remove("visible");
         const lyrics = GLOBAL_LYRICS;
