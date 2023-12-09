@@ -93,8 +93,10 @@ main {
 
     padding: 64px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 
 }
 
@@ -141,24 +143,18 @@ main {
 .title-letter:nth-child(7) { animation-delay: 1.05s; }
 .title-letter:nth-child(8) { animation-delay: 1.2s; }
 
-.main-section .title.visible {
-
-    margin-bottom: 80px;
-
-}
 
 .main-section .title-description {
     font-size: 26px;
     text-align: center;
     font-weight: bold;
-    position: absolute;
-    opacity: 0%;    
+    opacity: 0;
     transition: all 2s;
 }
 
 .main-section .title-description.visible {
     opacity: 100%;
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 p {
@@ -226,4 +222,29 @@ footer {
 .secondary-section .move-button.left {
     margin-right: auto;
     transform: scaleX(-1);
+}
+
+.play-button {
+    border: 1px solid #000; /* Adding a border for visibility */
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 12px;
+    transition: all 0.5s;
+    opacity: 0.7;
+    position: absolute;
+    font-size: 24px;
+    bottom: 20%;
+    background: rgb(177,73,181);
+    background: -moz-linear-gradient(137deg, rgba(177,73,181,1) 0%, rgba(246,39,163,1) 100%);
+    background: -webkit-linear-gradient(137deg, rgba(177,73,181,1) 0%, rgba(246,39,163,1) 100%);
+    background: linear-gradient(137deg, rgba(177,73,181,1) 0%, rgba(246,39,163,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b149b5",endColorstr="#f627a3",GradientType=1);
+}
+
+.play-button:hover {
+    opacity: 1;
 }

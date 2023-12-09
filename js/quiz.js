@@ -193,10 +193,10 @@ async function startRound() {
             loader.classList.remove("visible");
             lyricElement.classList.add("active");
             lyricElement.innerText = `Your final score, ${GameSession.name}, is: ${GameSession.score}`;
-            document.getElementById("restart-button").classList.add("visible");
+            document.getElementById("restart-part").classList.add("visible");
             document.getElementById("restart-button").onclick = () => {
                 document.getElementById("restart-button").onclick = () => {};
-                document.getElementById("restart-button").classList.remove("visible");
+                document.getElementById("restart-part").classList.remove("visible");
                 document.getElementById("lyric").classList.remove("active");
                 document.getElementById("lyric").innerText = "";
                 GameSession.starting = false;
