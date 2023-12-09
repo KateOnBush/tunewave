@@ -133,6 +133,7 @@ function startGame() {
     GameSession.started = true;
     GameSession.round = 1;
     GameSession.score = 0;
+    GameSession.streak = 0;
     document.getElementById("back").style.display = "none";
     startRound();
 }
