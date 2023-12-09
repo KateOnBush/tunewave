@@ -257,16 +257,20 @@ async function startRound() {
 
         const randomLyric = lyrics[Math.floor(Math.random() * lyrics.length)];
         GameSession.currentLyric = randomLyric;
-        let choices = [];
+        const formattedArtist = formatArtist(randomLyric.artist);
+        let choices = [], formattedChoices = [];
         for(let i = 0; i < 5; i++) {
-            let choice;
+            let choice, formattedChoice;
             do {
-                choice = formatArtistProperly(lyrics[Math.floor(Math.random() * lyrics.length)].artist);
-            } while(choices.includes(choice) || compareArtists(choice, randomLyric.artist))
+                let a = formatArtist(lyrics[Math.floor(Math.random() * lyrics.length)].artist)
+                choice = a[0];
+                formattedChoice = a[1];
+            } while(choices.includes(choice) || randomLyric.artist.toLowerCase().includes(choice))
             choices.push(choice);
+            formattedChoices.push(formattedChoice);
         }
         let r = Math.floor(Math.random() * 5);
-        choices[r] = formatArtistProperly(randomLyric.artist);
+        choices[r] = formattedArtist[0];
         GameSession.rightAnswer = r;
         const lyricElement = document.getElementById("lyric");
         lyricElement.classList.add("active");
@@ -276,7 +280,7 @@ async function startRound() {
         document.getElementById("rounds").classList.add("visible")
         document.getElementById("rounds").innerText = "QUESTION " + GameSession.round;
         Array(...document.getElementById("choices").children).forEach((e, i) => {
-            e.innerText = choices[i];
+            e.innerText = formattedChoices[i];
         })
         startTimer();
 
@@ -380,14 +384,15 @@ function createConfetti() {
     });
 }
 
+Array.prototype.random = function() {
+    return this[Math.floor(Math.random() * this.length)];
+}
+
 function compareArtists(artist1, artist2) {
     return formatArtist(artist1) === formatArtist(artist2);
 }
 
 function formatArtist(artist) {
-    return artist.split(" ").join("").split(",")[0].split("ft.")[0];
-}
-
-function formatArtistProperly(artist) {
-    return artist.split(",")[0].split("ft.")[0];
+    const a = artist.split(",").random().split("ft.").random().split("&").random().split(" ").filter(a => a).join(" ");
+    return [a.toLowerCase(), a];
 }
