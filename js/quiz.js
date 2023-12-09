@@ -271,6 +271,7 @@ async function startRound() {
         }
         let r = Math.floor(Math.random() * 5);
         choices[r] = formattedArtist[0];
+        formattedChoices[r] = formattedArtist[1];
         GameSession.rightAnswer = r;
         const lyricElement = document.getElementById("lyric");
         lyricElement.classList.add("active");
