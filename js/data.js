@@ -1348,7 +1348,7 @@ const GLOBAL_LYRICS = [
   { "lyric": "Wake me up when September ends.", "artist": "Green Day", "theme": "rock", "title": "Wake Me Up When September Ends" },
   { "lyric": "You're still the one I run to, the one that I belong to.", "artist": "Shania Twain", "theme": "country", "title": "You're Still the One" },
   { "lyric": "I'm sorry, the old Taylor can't come to the phone right now.", "artist": "Taylor Swift", "theme": "pop", "title": "Look What You Made Me Do" },
-  { "lyric": "Do you remember the 21st night of September?", "artist": "Earth, Wind & Fire", "theme": "pop", "title": "September" },
+  { "lyric": "Do you remember the 21st night of September?", "artist": "Earth Wind And Fire", "theme": "pop", "title": "September" },
   { "lyric": "Take me into your loving arms.", "artist": "Ed Sheeran", "theme": "pop", "title": "Thinking Out Loud" },
   { "lyric": "You lift my heart up when the rest of me is down.", "artist": "Disclosure ft. Sam Smith", "theme": "pop", "title": "Latch" },
   { "lyric": "She loves control, she wants it her way.", "artist": "Camila Cabello", "theme": "pop", "title": "She Loves Control" },
