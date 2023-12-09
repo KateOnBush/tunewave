@@ -251,8 +251,9 @@ main .game {
         margin-right: 100%;
         background-color: #ff0e58;
     }
-
 }
+
+
 
 .timer > .progress {
     position: absolute;
