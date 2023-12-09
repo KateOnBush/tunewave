@@ -243,12 +243,15 @@ footer {
     background: -webkit-linear-gradient(137deg, rgba(177,73,181,1) 0%, rgba(246,39,163,1) 100%);
     background: linear-gradient(137deg, rgba(177,73,181,1) 0%, rgba(246,39,163,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b149b5",endColorstr="#f627a3",GradientType=1);
-    animation: playButton 1s ease;
-    animation-delay: 1.5s;
+    animation: playButton 3s ease;
 }
 
 @keyframes playButton {
     0% {
+        opacity: 0;
+        transform: scale(5%);
+    }
+    66% {
         opacity: 0;
         transform: scale(5%);
     }
