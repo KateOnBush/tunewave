@@ -7,14 +7,10 @@ main {
     background-image: none;
     border-color: rgba(142, 136, 160, 0.4);
     background-color: rgba(28, 3, 3, 0.3);
-    padding: 32px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-main > * {
-    margin: 32px;
 }
 
 .classment-container {
@@ -146,4 +142,29 @@ main > * {
 /* Hide the scrollbar buttons */
 ::-webkit-scrollbar-button {
     display: none;
+}
+
+.ranking-title-container {
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+.ranking-title {
+    font-size: 30px;
+}
+
+@media screen and (max-width: 720px) {
+    main {
+        padding: 0px;
+    }
+    .classment-container {
+        width: 100%;
+        height: 90%;
+    }
+    .ranking-title-container {
+        height: 10%;
+    }
+    .ranking-title {
+        font-size: 20px;
+    }
 }

@@ -9,29 +9,34 @@
     <link rel="stylesheet" href="css/quiz.css">
 </head>
 <body>
-    <script src="js/data.js" type="text/javascript"></script>
-    <script src="js/quiz.js" type="text/javascript"></script>
+<script src="js/data.js" type="text/javascript"></script>
+<script src="js/quiz.js" type="text/javascript"></script>
+<header>
     <nav>
-        <img class="nav-element nav-logo" src='./img/logo.png'/>
-        <div class="nav-element nav-logo"><a href="index.html">Tunewave</a></div>
-    
-        <a href='index.html' class="nav-element nav-button">HOME</a>
-        <a href='#' class="nav-element nav-button selected">QUIZ</a>
-        <a href='classement.html' class="nav-element nav-button">RANKING</a>
-        <a href='contribuer.html' class="nav-element nav-button">CONTRIBUTE</a>
-        <a href='about.html' class="nav-element nav-button">ABOUT</a>
-      
-      </nav>
-    <main>
-        <div class="top-layer" id="top-layer">
-            <div class="welcome-msg" id="welcome-message">
-                <h1>WELCOME TO TUNEWAVE</h1>
-    
-                <p id="welcome-message-text"></p>
+        <div class="logo-container">
+            <img class="nav-element nav-logo" src='./img/logo.png'/>
+            <div class="nav-element nav-logo"><a href="index.html">Tunewave</a></div>
+        </div>
 
-                <div>
-                    <button class="button" id="welcome-message-skip" onclick="nextMessage();">Continue</button>
-                    <button class="button" id="welcome-message-start" onclick="closeMessage();">Start the quiz!</button>
+        <div class="nav-container">
+            <a class="nav-element nav-button" href='index.html'>HOME</a>
+            <a class="nav-element nav-button selected" href='quiz.html'>QUIZ</a>
+            <a class="nav-element nav-button" href='classement.html'>RANKING</a>
+            <a class="nav-element nav-button" href='contribuer.html'>CONTRIBUTE</a>
+            <a class="nav-element nav-button" href='about.html'>ABOUT</a>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="top-layer" id="top-layer">
+        <div class="welcome-msg" id="welcome-message">
+            <h1>WELCOME TO TUNEWAVE</h1>
+
+            <p id="welcome-message-text"></p>
+
+            <div>
+                <button class="button" id="welcome-message-skip" onclick="nextMessage();">Continue</button>
+                <button class="button" id="welcome-message-start" onclick="closeMessage();">Start the quiz!</button>
                 </div>
             </div>
             <div class="welcome-msg" id="username-message">

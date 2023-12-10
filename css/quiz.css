@@ -18,10 +18,12 @@
 
 .top-layer.done {
     opacity: 0;
+    display: none;
 }
 
 .welcome-msg:not(.visible) {
     opacity: 0;
+    display: none;
 }
 
 .welcome-msg {
