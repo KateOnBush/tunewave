@@ -17,12 +17,10 @@
 }
 
 .top-layer.done {
-    display: none;
     opacity: 0;
 }
 
 .welcome-msg:not(.visible) {
-    display: none;
     opacity: 0;
 }
 
@@ -219,7 +217,6 @@ main .game {
 
 .timer:not(.active) {
     opacity: 0;
-    display: none;
 }
 
 .timer > .time {
