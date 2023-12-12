@@ -18,8 +18,8 @@
 
         <div class="nav-container">
             <a class="nav-element nav-button" href='index.html'>HOME</a>
-            <a class="nav-element nav-button selected" href='quiz.html'>QUIZ</a>
-            <a class="nav-element nav-button" href='classement.html'>RANKING</a>
+            <a class="nav-element nav-button" href='quiz.html'>QUIZ</a>
+            <a class="nav-element nav-button selected" href='classement.html'>RANKING</a>
             <a class="nav-element nav-button" href='contribuer.html'>CONTRIBUTE</a>
             <a class="nav-element nav-button" href='about.html'>ABOUT</a>
         </div>
@@ -31,21 +31,19 @@
     <div class="ranking-title-container">
         <h1 class="ranking-title">GLOBAL RANKING</h1>
     </div>
-    <div class="classment-container" id="rank-container">
-        <div class="rank primary">
+    <div class="classment-container-parent">
+        <div class="loader" id="loader"></div>
+        <div class="rank">
             <span class="number">N°</span>
             <span class="name">NAME</span>
-                <span class="player-score">HIGHSCORE</span>
-            </div>
-            <div class="loader" id="loader"></div>
+            <span class="player-score">HIGHSCORE</span>
         </div>
+        <div class="classment-container" id="rank-container">
+
+        </div>
+    </div>
+
         
     </main>
-    
-   
-
-    <footer>
-    
-    </footer>
 </body>
 </html>
