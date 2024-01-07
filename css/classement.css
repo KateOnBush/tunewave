@@ -93,11 +93,11 @@ main {
 }
 
 
-.rank:hover ~ .rank:not(:hover) {
+.classment-container:has(.rank:hover) .rank:not(:hover) {
     opacity: 50%;
 }
 
-.classment-container .rank:hover {
+.classment-container:has(.rank:hover) .rank:hover {
     box-shadow: 0px 0px 24px 6px rgba(255, 255, 255, 0.91);
     cursor: pointer;
 }
@@ -124,7 +124,8 @@ main {
     transition: all 0.4s;
     animation: spin 2s linear infinite;
     z-index: 1;
-    top: 50%;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
 }
 
 @keyframes spin {

@@ -37,19 +37,19 @@
             <div>
                 <button class="button" id="welcome-message-skip" onclick="nextMessage();">Continue</button>
                 <button class="button" id="welcome-message-start" onclick="closeMessage();">Start the quiz!</button>
-                </div>
             </div>
-            <div class="welcome-msg" id="username-message">
-                <h2>PLEASE ENTER YOUR NAME</h2>
-                <p>Let us know how you want to be called!</p>
-                <div class="remember">
-                    <label for="remember-me">Remember me</label><input type="checkbox" id="remember-me" name="remember"/>
-                </div>
-                <div>
-                    <input type="input" class="input" id="username-input"/>
-                    <button class="button" onclick="saveUsername();">Let's go</button>
-                </div>
+        </div>
+        <div class="welcome-msg" id="username-message">
+            <h2>PLEASE ENTER YOUR NAME</h2>
+            <p>Let us know how you want to be called!</p>
+            <div class="remember">
+                <label for="remember-me">Remember me</label><input type="checkbox" id="remember-me" name="remember"/>
             </div>
+            <div class="flex-row center-elements">
+                <input type="input" class="input" id="username-input"/>
+                <button class="button" onclick="saveUsername();">Let's go</button>
+            </div>
+        </div>
         </div>
         <div class="back" id="back">
             <span id="game-counter"></span>
